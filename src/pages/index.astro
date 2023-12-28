@@ -1,16 +1,22 @@
 ---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProfileCard from '../components/ProfileCard.jsx';
+import ActivationButton from '../components/ActivationButton.jsx';
+import QrButton from '../components/QrButton.jsx';
+import RegularButton from '../components/RegularButton.jsx';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<MainLayout>
+	<h1>Home</h1>
+	<ProfileCard name = "Wendy" age = {10} bio = "160 cm" pictureSrc = "src"/>
+	<ActivationButton/>
+	<div>
+		<QrButton/>
+		<div>
+			<RegularButton text = "Ajustes" iconSrc = "Gear"/>
+			<RegularButton text = "FAQ" iconSrc = "ChatBox"/>
+		</div>
+	</div>
+</MainLayout>	
