@@ -9,14 +9,21 @@ import RegularButton from '../components/RegularButton.jsx';
 
 
 <MainLayout>
-	<h1>Home</h1>
-	<ProfileCard name = "Wendy" age = {10} bio = "160 cm" pictureSrc = "src"/>
-	<ActivationButton/>
-	<div>
-		<QrButton/>
-		<div>
-			<RegularButton text = "Ajustes" iconSrc = "Gear"/>
-			<RegularButton text = "FAQ" iconSrc = "ChatBox"/>
+	<div class="flex justify-start items-center flex-col m-8" style="color: #fff">
+		<div class="flex justify-center items-center mb-10" style="color: #506990">
+			<h1>Home</h1>
 		</div>
+		<ProfileCard name = "Wendy" age = {10} bio = "160 cm" pictureSrc = "src"/>
+		<ActivationButton/>
+		<div class="flex w-full">
+			<div class="flex-1 min-h-full p-2">
+				<QrButton text="Compartir" onClick={() => {}}/>
+			</div>
+			<div class="flex flex-col flex-1">
+				<RegularButton text = "Ajustes" iconSrc = "Gear" onClick={() => {}} color="#cf9261" client:load/>
+				<RegularButton text = "FAQ" iconSrc = "ChatBox" onClick={() => {}} color="#3d3d3d" client:load/>
+			</div>
+		</div>
+
 	</div>
 </MainLayout>	

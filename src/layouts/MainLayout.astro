@@ -1,5 +1,6 @@
 ---
 import BottomBar from '../components/BottomBar.jsx';
+import TopBar from '../components/TopBar';
 ---
 
 <html>
@@ -10,11 +11,9 @@ import BottomBar from '../components/BottomBar.jsx';
 		<meta name="generator" content={Astro.generator} />
 		<title>Safed</title>
 	</head>
-<body>
-  <!-- Page Content Slot -->
-  <slot />
-
-  <!-- Bottom Bar -->
-    <BottomBar />
+<body class="w-full">
+	<TopBar />
+  		<slot />
+	<BottomBar />
 </body>
 </html>
